@@ -1,0 +1,270 @@
+.movies-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.auth-container {
+  text-align: center;
+  margin-top: 250px;
+}
+
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.card {
+  width: 250px; 
+  height: 430px; 
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 340px; /* Fijar la altura de la imagen */
+  object-fit: cover;
+}
+
+.card-body {
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #262f32;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  width: 100%;
+  color: #ffffff;
+}
+
+.card-body .card-title {
+  color: white !important;
+}
+/* .card-text {
+  color: #ffffff;
+} */
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.card-buttons .btn {
+  flex-grow: 1; /* Hace que todos los botones ocupen el mismo espacio */
+  height: 40px; /* Tamaño uniforme para los botones */
+  font-size: 14px;
+  text-align: center;
+}
+
+.movie-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+.btn.btn-info {
+  color: rgb(255, 255, 255) !important;
+  font-weight: 500;
+}
+
+.btn.btn-info:hover {
+  background-color: #138496 !important; /* Color más oscuro al pasar el mouse */
+}
+
+.btn.btn-info:disabled {
+  background-color: rgb(78, 55, 29) !important; /* Cambia el color de fondo a rojo */
+  border-color: rgb(255, 196, 3) !important; /* Cambia el borde a rojo */
+  color: rgb(0, 235, 248) !important; /* Mantiene el texto en blanco */
+  cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+}
+.btn.btn-primary {
+  font-weight: 500;
+}
+.btn.btn-primary:hover {
+  background-color: #00409a !important; 
+}
+
+
+.rating-container {
+  margin-bottom: 2px;
+}
+
+.rating-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 1px; /* Espacio entre el número y las estrellas */
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 25px;
+}
+
+.star {
+  color: gray;
+  transition: color 0.3s ease-in-out;
+}
+
+.star.filled {
+  color: rgb(255, 174, 0);
+}
+
+.star.half {
+  position: relative;
+  color: gold;
+}
+
+.star.half::after {
+  content: "★";
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: rgb(255, 174, 0);
+}
+
+.star-rating.static {
+  pointer-events: none; /* Evita que las estrellas sean clickeables */
+}
+
+.pagination-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.page-number {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Para que el footer se mantenga al fondo */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  position: fixed;
+  bottom: -100px; /* Oculta el footer inicialmente */
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 0.5px;
+  font-size: 14px;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.container.text-center {
+  margin-bottom: 20px;
+}
+
+/* //dslmdlsmdmsld  */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 60%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .card {
+  background-color: #bdbdbd7d;
+  color: #ffffff;
+  border: 1px solid gray;
+}
+
+body.dark-mode .btn {
+  background-color: #444;
+  color: #ffffff;
+}
+
+/* Modo Claro */
+body {
+  background-color: #c5c5c5;
+  color: #000000;
+}
+
